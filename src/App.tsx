@@ -1,5 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import './App.css'
+import {World} from './components/World/World'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
           <color args={["ivory"]} attach="background" />
           {/* {debugThree ? <Perf position="top-left" /> : null} */}
 
-          {/* <World /> */}
+          <World showGrid={true} />
         </Canvas>
       </>
     </>
