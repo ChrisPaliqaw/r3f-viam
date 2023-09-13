@@ -1,9 +1,8 @@
-import { Canvas } from '@react-three/fiber'
-import './App.css'
-import {World} from './components/World/World'
+import { Canvas } from "@react-three/fiber";
+import "./App.css";
+import { World } from "./components/World";
 
 function App() {
-
   return (
     <>
       <p>Robot Window</p>
@@ -22,7 +21,7 @@ function App() {
         </Canvas>
       </>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
