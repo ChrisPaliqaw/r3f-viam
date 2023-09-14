@@ -16,6 +16,7 @@ export const NoWireframe: Story = {
     position: { x: 0, y: 0, z: 0 },
     wireframe: false,
     visible: true,
+    showTransform: true,
   },
 };
 
@@ -24,6 +25,7 @@ export const ZValueOffset: Story = {
     position: { x: 0, y: 0, z: 0.75 },
     wireframe: false,
     visible: true,
+    showTransform: true,
   },
 };
 
@@ -32,6 +34,7 @@ export const Wireframe: Story = {
     position: { x: 0, y: 0, z: 0 },
     wireframe: true,
     visible: true,
+    showTransform: true,
   },
 };
 
@@ -40,5 +43,15 @@ export const Invisible: Story = {
     position: { x: 0, y: 0, z: 0 },
     wireframe: true,
     visible: false,
+    showTransform: true,
+  },
+};
+
+export const HideTransform: Story = {
+  args: {
+    position: { x: 0, y: 0, z: 0 },
+    wireframe: false,
+    visible: true,
+    showTransform: false,
   },
 };

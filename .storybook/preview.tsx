@@ -1,3 +1,4 @@
+import './preview.css';
 import type { Preview } from "@storybook/react";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
@@ -20,6 +21,8 @@ const preview: Preview = {
           overflow: "hidden",
         }}
       >
+        <directionalLight position={[1, 2, 3]} intensity={1.5} />
+        <ambientLight intensity={0.25} />
         <OrbitControls enableDamping={true} makeDefault />
         <color args={["ivory"]} attach="background" />
         <Story />

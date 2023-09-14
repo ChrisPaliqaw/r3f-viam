@@ -1,15 +1,16 @@
 import React from "react";
+import { Transform } from "../Transform";
 
 type WorldProps = {
   children: React.ReactElement | React.ReactElement[];
   showGrid: boolean;
+  showTransform: boolean;
 };
 
-export function World({ children, showGrid}: WorldProps ) {
+export function World({ children, showGrid, showTransform}: WorldProps ) {
   return (
     <>
-      <directionalLight position={[1, 2, 3]} intensity={1.5} />
-      <ambientLight intensity={0.25} />
+      <Transform name="world" visible={showTransform} />
       {showGrid ? (
         <mesh scale={[1, 1, 1]} position={[0, 0, 0]}>
           <gridHelper args={[20, 20]} />

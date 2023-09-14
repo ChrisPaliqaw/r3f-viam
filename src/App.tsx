@@ -17,9 +17,11 @@ function App() {
             position: [-1, 1, 1],
           }}
         >
+          <directionalLight position={[1, 2, 3]} intensity={1.5} />
+          <ambientLight intensity={0.25} />
           <OrbitControls enableDamping={true} makeDefault />
           <color args={["ivory"]} attach="background" />
-          <World showGrid={true}>
+          <World showGrid={true} showTransform={true}>
             <Robot
               position={new THREE.Vector3(0.1, 0, 0.075 * 0.5)}
               wireframe={true}
