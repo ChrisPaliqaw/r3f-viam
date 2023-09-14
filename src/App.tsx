@@ -1,6 +1,8 @@
+import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import { World } from "./components/World";
+import { Robot } from "./components/Robot";
 
 function App() {
   return (
@@ -15,9 +17,13 @@ function App() {
           }}
         >
           <color args={["ivory"]} attach="background" />
-          {/* {debugThree ? <Perf position="top-left" /> : null} */}
-
-          <World showGrid={true} />
+          <World showGrid={true}>
+            <Robot
+              position={new THREE.Vector3(0.1, 0, 0.075 * 0.5)}
+              wireframe={true}
+              visible={true}
+            />
+          </World>
         </Canvas>
       </>
     </>
