@@ -1,4 +1,3 @@
-import { OrbitControls } from "@react-three/drei";
 import React from "react";
 
 type WorldProps = {
@@ -9,7 +8,6 @@ type WorldProps = {
 export function World({ children, showGrid}: WorldProps ) {
   return (
     <>
-      <OrbitControls enableDamping={true} makeDefault />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
       <ambientLight intensity={0.25} />
       {showGrid ? (

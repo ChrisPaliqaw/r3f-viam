@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import { World } from "./components/World";
 import { Robot } from "./components/Robot";
+import { OrbitControls } from "@react-three/drei";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             position: [-1, 1, 1],
           }}
         >
+          <OrbitControls enableDamping={true} makeDefault />
           <color args={["ivory"]} attach="background" />
           <World showGrid={true}>
             <Robot
