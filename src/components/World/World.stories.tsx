@@ -11,8 +11,14 @@ export default meta;
 
 type Story = StoryObj<typeof World>
 
-export const Primary: Story = {
+export const ShowGrid: Story = {
   args: {
     showGrid: true,
+  },
+};
+
+export const HideGrid: Story = {
+  args: {
+    showGrid: false,
   },
 };
